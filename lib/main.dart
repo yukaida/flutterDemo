@@ -12,6 +12,9 @@ class MyApp extends StatelessWidget {
 
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData.light().copyWith(
+        primaryColor: Colors.purple
+      ),
       title: '111',
       home: BottomNavigationDemo(
         restorationId: '1',
@@ -84,6 +87,9 @@ class _BottomNavigationDemoState extends State<BottomNavigationDemo>
     ];
 
     return Scaffold(
+      appBar: AppBar(
+        title: Text('来学flutter吧'),
+      ),
       body: SafeArea(
         child: _widgetOptions[_selectIndex],
       ),
